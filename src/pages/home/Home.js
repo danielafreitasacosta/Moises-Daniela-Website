@@ -8,7 +8,7 @@ export default function Home () {
                 Inicio de nuestro proyecto
             </div>
             <Card fecha={new Date()}>
-                <p>Me gusta React</p>
+                <h1>Está será la LANDING PAGE de nuestro proyecto</h1>
             </Card>
         </div>
     )
