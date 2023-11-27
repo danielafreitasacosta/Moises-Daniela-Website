@@ -5,7 +5,7 @@ export default function Home () {
     return (
         <div>
             <div>
-                Inicio
+                Inicio de nuestro proyecto
             </div>
             <Card fecha={new Date()}>
                 <p>Me gusta React</p>
