@@ -1,15 +1,15 @@
-import Card from 'src/components/home/Card'
-import './Home.css'
 
-export default function Home () {
-    return (
-        <div>
-            <div>
-                Inicio de nuestro proyecto
-            </div>
-            <Card fecha={new Date()}>
-                <h1>Está será la LANDING PAGE de nuestro proyecto</h1>
-            </Card>
-        </div>
-    )
-}
+import React from 'react';
+import 'src/pages/home/Home' // Crearemos este archivo en el siguiente paso
+
+const Home = () => {
+  return (
+    <div className="image-grid">
+      <div className="img-center">
+        <img src="./images/main-rev-img-1.jpg" alt="Image 4" />
+      </div>
+    </div>
+  );
+};
+
+export default Home;

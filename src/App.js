@@ -1,12 +1,14 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import Home from './pages/home/Home';
 import NotFound from './pages/not-found/NotFound';
 import Info from './pages/info/Info';
 import History from './pages/history/History';
 import { Suspense } from 'react';
 import AppLayout from './layouts/AppLayout';
 import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
+import React from 'react';
+import './App.css';
+import Home from './pages/home/Home';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,18 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <div className="App">
+      <h1>React Image Grid</h1>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
+
+/*function App() {
+  return <RouterProvider router={router} />
+}
+
+export default App;*/

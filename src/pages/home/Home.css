@@ -1,8 +1,22 @@
-div {
-    text-align: center;
-}
+/* src/components/ImageGrid.css */
 
-a.active {
-    color: green;
-    text-decoration: none
-}
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+  }
+
+  
+  .img-center {
+    width: 1920px;
+    height: 1080px;
+    object-fit: none;
+    border-radius: 8px;
+    margin: 0 5px;
+  }
