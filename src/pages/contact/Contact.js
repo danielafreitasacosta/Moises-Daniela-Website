@@ -1,8 +1,8 @@
-export default function Info () {
+export default function Contact () {
     return (
         <div>
             <div>
-                Info
+                Contact
             </div>
         </div>
     )
