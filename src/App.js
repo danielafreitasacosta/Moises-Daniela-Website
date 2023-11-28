@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import NotFound from './pages/not-found/NotFound';
-import Info from './pages/info/Info';
+import Info from './pages/contact/Contact';
 import History from './pages/history/History';
 import { Suspense } from 'react';
 import AppLayout from './layouts/AppLayout';
