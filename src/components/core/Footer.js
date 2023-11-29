@@ -8,7 +8,7 @@ export default function Footer() {
                     <Link to='/'>Inicio</Link>
                 </li>
                 <li>
-                    <Link to='/info'>Info</Link>
+                    <Link to='/contact'>Contact</Link>
                 </li>
                 <li>
                     <Link to='/history'>History</Link>
