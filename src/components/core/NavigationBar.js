@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
+import './NavigationBar.css';
+
 
 export default function NavigationBar() {
     return (
-        <div>
-            <NavLink to="/">Página de Inicio</NavLink>
-            <NavLink to="/contact">Página de Contacto</NavLink>
-            <NavLink to="/pricing">Página de Precios</NavLink>
-            <NavLink to="/history">Página de Historia</NavLink>
+        <div className="NavBar">
+            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/contact">Contacto</NavLink>
+            <NavLink to="/visitas">Visitas</NavLink>
+            <NavLink to="/history">Historia</NavLink>
         </div>
     )
 }

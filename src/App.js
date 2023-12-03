@@ -1,14 +1,13 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.css';
-import NotFound from './pages/not-found/NotFound';
+import NotFound from './components/shared/NotFound';
 import Contact from './pages/contact/Contact';
-import Pricing from './pages/pricing/Pricing';
+import Pricing from './pages/visitas/Visitas';
 import History from './pages/history/History';
 import { Suspense } from 'react';
 import AppLayout from './layouts/AppLayout';
 import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
 import React from 'react';
-import './App.css';
+import './index.css';
 import Home from './pages/home/Home';
 
 const router = createBrowserRouter([
@@ -26,9 +25,9 @@ const router = createBrowserRouter([
   },
   {
     path: '/history',
-  
-        element: <History />
-      },
+
+    element: <History />
+  },
   {
     path: '*',
     element: <NotFound />

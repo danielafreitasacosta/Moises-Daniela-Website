@@ -1,0 +1,19 @@
+a {
+    color: azure; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    font-family: 'Montserrat';
+    font-weight: 300; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: azure; 
+}
+
+.NavBar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; 
+}

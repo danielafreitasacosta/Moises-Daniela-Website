@@ -14,7 +14,10 @@ const Home = () => {
       <hr style={{ width: '100%', backgroundColor: 'white', height: '2px', border: 'none', marginTop: '40px' }} />
       <NavigationBar />
 
-    </div>
+      <h1> CONOCE NUESTROS VINOS  </h1>
+      <hr style={{ width: '25%', backgroundColor: 'white' }} />
+
+    </div >
   );
 };
 

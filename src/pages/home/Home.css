@@ -22,3 +22,10 @@ img {
   border-radius: 8px;
   margin: 0 5px;
 }
+
+h1 {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25%;
+}

@@ -1,12 +1,12 @@
 
 import React from 'react';
-import 'src/pages/pricing/Pricing' // Crearemos este archivo en el siguiente paso
+import 'src/pages/visitas/Visitas' // Crearemos este archivo en el siguiente paso
 
 const Pricing = () => {
   return (
     <div className="image-grid">
       <div className="img-center">
-        <img/>
+        <img />
       </div>
     </div>
   );
