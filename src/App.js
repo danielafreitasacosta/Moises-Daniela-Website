@@ -38,15 +38,4 @@ function App() {
   return <RouterProvider router={router} />
 }
 
-
-/*function App() {
-  return (
-    <div className="App">
-      <h1>React Image Grid</h1>
-      <Home />
-    </div>
-  );
-}*/
-
-
 export default App;
