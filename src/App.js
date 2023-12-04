@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NotFound from './components/shared/NotFound';
 import Contact from './pages/contact/Contact';
-import Pricing from './pages/visitas/Visitas';
 import History from './pages/history/History';
+import Visitas from './pages/visitas/Visitas';
 import { Suspense } from 'react';
 import AppLayout from './layouts/AppLayout';
 import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
     element: <Contact />
   },
   {
-    path: '/pricing',
-    element: <Pricing />
+    path: '/visitas',
+    element: <Visitas />
   },
   {
     path: '/history',
@@ -37,16 +37,6 @@ const router = createBrowserRouter([
 function App() {
   return <RouterProvider router={router} />
 }
-
-
-/*function App() {
-  return (
-    <div className="App">
-      <h1>React Image Grid</h1>
-      <Home />
-    </div>
-  );
-}*/
 
 
 export default App;

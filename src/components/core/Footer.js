@@ -13,6 +13,9 @@ export default function Footer() {
                 <li>
                     <Link to='/history'>History</Link>
                 </li>
+                <li>
+                    <Link to='/visitas'>Visitas</Link>
+                </li>
             </ul>
             Derechos reservados
         </div>
