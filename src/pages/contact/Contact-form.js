@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material'; 
+import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 
 
@@ -18,25 +18,25 @@ function ContactForm() {
 
     return (
         <>
-        <form onSubmit={handleSubmit(onSubmit)}>
-        <Controller
-                name="fieldName"
-                control={control}
-                rules={{ required: 'Este campo es obligatorio' }}
-                render={({ field }) =>
-                    <TextField
-                        {...field}
-                        label="Nombre"
-                        variant="outlined"
-                        size='small'
-                        error={!!errors.fieldName}
-                        helperText={errors?.fieldName?.message.toString()}
-                    />
-                }
-            />
-            <Button variant='contained' type="submit" sx={{ marginLeft: '4px' }}>Enviar</Button>
-            
-        </form>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <Controller
+                    name="fieldName"
+                    control={control}
+                    rules={{ required: 'Este campo es obligatorio' }}
+                    render={({ field }) =>
+                        <TextField
+                            {...field}
+                            label="Nombre"
+                            variant="outlined"
+                            size='small'
+                            error={!!errors.fieldName}
+                            helperText={errors?.fieldName?.message.toString()}
+                        />
+                    }
+                />
+                <Button variant='contained' type="submit" sx={{ marginLeft: '4px' }}>Enviar</Button>
+
+            </form>
         </>
     )
 }
