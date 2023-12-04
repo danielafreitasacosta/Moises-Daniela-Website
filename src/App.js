@@ -3,6 +3,7 @@ import NotFound from './components/shared/NotFound';
 import Contact from './pages/contact/Contact';
 import History from './pages/history/History';
 import Visitas from './pages/visitas/Visitas';
+import Wine from './pages/wine/Wine';
 import { Suspense } from 'react';
 import AppLayout from './layouts/AppLayout';
 import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     path: '/history',
 
     element: <History />
+  },
+  {
+    path: '/wine',
+    element: <Wine />
   },
   {
     path: '*',
