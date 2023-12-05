@@ -10,6 +10,8 @@ const theme = createTheme({
     },
 });
 
+// Añadir tipografía
+
 export default function UsingColorObject() {
     return (
         <ThemeProvider theme={theme}>
