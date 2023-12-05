@@ -4,12 +4,19 @@ import Contact from './pages/contact/Contact';
 import History from './pages/history/History';
 import Visitas from './pages/visitas/Visitas';
 import Wine from './pages/wine/Wine';
-import { Suspense } from 'react';
-import AppLayout from './layouts/AppLayout';
-import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
 import React from 'react';
 import './index.css';
 import Home from './pages/home/Home';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { green } from '@mui/material/colors';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: green[500],
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -40,7 +47,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
 }
 
 export default App;

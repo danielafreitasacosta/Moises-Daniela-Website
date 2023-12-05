@@ -2,6 +2,8 @@ import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 
 
+
+
 function ContactForm() {
     const { control, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {
@@ -33,10 +35,71 @@ function ContactForm() {
                             helperText={errors?.fieldName?.message.toString()}
                         />
                     }
+
+
                 />
-                <Button variant='contained' type="submit" sx={{ marginLeft: '4px' }}>Enviar</Button>
+
+                <Controller
+                    name="fieldName"
+                    control={control}
+                    rules={{ required: 'Este campo es obligatorio' }}
+                    render={({ field }) =>
+                        <TextField
+                            {...field}
+                            label="Email"
+                            variant="outlined"
+                            size='small'
+                            error={!!errors.fieldName}
+                            helperText={errors?.fieldName?.message.toString()}
+                        />
+                    }
+
+
+                />
+
+                <Controller
+                    name="fieldName"
+                    control={control}
+                    rules={{ required: 'Debes rellenar este campo' }}
+                    render={({ field }) =>
+                        <TextField
+                            {...field}
+                            label="Message"
+                            multiline
+                            rows={4}
+                            error={!!errors.fieldName}
+                            helperText={errors?.fieldName?.message.toString()
+                            }
+                        />
+                    }
+                />
+
+                <Controller
+                    name="fieldName"
+                    control={control}
+                    rules={{ required: 'Este campo es obligatorio' }}
+                    render={({ field }) =>
+                        <TextField
+                            {...field}
+                            label="Message"
+                            multiline
+                            rows={4}
+                            error={!!errors.fieldName}
+                            helperText={errors?.fieldName?.message.toString()}
+                        />
+                    }
+
+
+                />
+
+                <Button variant="contained" type="submit" color="primary">
+                    Enviar
+                </Button>
+
 
             </form>
+
+
         </>
     )
 }
