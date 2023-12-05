@@ -1,6 +1,13 @@
-export default function Card ({ children, fecha }) {
+import { Typography } from "@mui/material";
+import { withTranslation } from "react-i18next"
+
+function WeatherCard ({ children, fecha, t, i18n }) {
     return (
+        
         <div>
+            <Typography>
+                {t('temperatura')}
+            </Typography>
             <h1>
                 Curs SOC 
             </h1>
@@ -10,3 +17,5 @@ export default function Card ({ children, fecha }) {
         </div>
     )
 }
+
+export default withTranslation('home')(WeatherCard);

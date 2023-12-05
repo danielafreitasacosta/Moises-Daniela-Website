@@ -10,6 +10,7 @@ import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
 import React from 'react';
 import './index.css';
 import Home from './pages/home/Home';
+import './services/i18n';
 
 const router = createBrowserRouter([
   {
