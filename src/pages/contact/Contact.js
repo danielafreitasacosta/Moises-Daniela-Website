@@ -1,65 +1,42 @@
-import "./Contact.css";
-import React, { useRef } from 'react';
+//import "./Contact.css";
 import NavigationBar from "src/components/core/NavigationBar";
-import 'src/pages/contact/Contact'
-import emailjs from '@emailjs/browser';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import defaultTheme from "src/components/shared/defaultTheme";
+import ContactForm from "src/components/contact/ContactForm";
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 
-/*
-Credenciales de la cuenta de Gmail donde llegan los correos: 
-Correo: cellertecnocampus@gmail.com
-Contraseña: CELLerTECNOcampus2023!
-*/
 
+const Item = styled(Paper)(({ theme }) => ({
+    //backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    //...theme.typography.body2,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.primary,
+}));
 
 
 const Contact = () => {
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm(
-            'service_pddibau',
-            'template_1qz768n',
-            form.current,
-            'hsXoj_9R8eIZQIEa5'
-        )
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        e.target.reset();
-    };
-
-
     return (
-        <>
-            <div style={{ color: defaultTheme.colors.primary }}>
-                <div className="image-grid-contact">
-                    <div className="img-center">
-                        <NavigationBar />
-                    </div>
-                </div>
-                <section>
-                    <div className="column">
-                        <h2 >Contacto</h2>
+        <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={1} direction={"column"} justifyContent={"center"} alignItems={"center"}>
+                <Grid item xs={12} sm={6}>
 
-                        <form ref={form} onSubmit={sendEmail} className="column" >
-                            <TextField id="outlined-basic" variant="outlined" type="text" placeholder="Full Name" name="user_name" required />
-
-                            <input type="email" placeholder="Email" name="user_email" required></input>
-                            <input type="text" placeholder="Subject" name="subject" required></input>
-                            <textarea name="message" cols={30} rows={10}></textarea>
-                            <Button variant="contained" type="submit"> Send Message </Button>
-                        </form>
+                    <div className="image-grid-contact">
+                        <div className="img-center">
+                            <NavigationBar />
+                        </div>
                     </div>
-                </section>
-            </div>
-        </>
+                    <section>
+                        <Grid item xs={12} sm={6}>
+                            <h2 >Contacto</h2>
+                            <ContactForm />
+                        </Grid>
+                    </section>
+                </Grid>
+            </Grid>
+        </Box>
     );
 };
 
