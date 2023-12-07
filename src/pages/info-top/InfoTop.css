@@ -1,10 +1,16 @@
-.paragraf1 {
-    text-align: left
-    
+.info-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
-.paragraf2 {
-    text-align: right;
+
+.left {
+    display: flex;
+    align-items: flex-start;
+
 }
-.texto {
-    color: blue;
+
+.right {
+    display: flex;
+    align-items: flex-end;
 }

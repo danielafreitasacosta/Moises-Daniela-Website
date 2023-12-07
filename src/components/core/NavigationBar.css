@@ -1,19 +1,22 @@
 a {
-    color: azure; 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-around; 
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     font-family: 'Montserrat';
-    font-weight: 300; 
+    font-weight: 300;
     text-decoration: none;
 }
 
 a:visited {
-    color: azure; 
+    color: azure;
 }
 
 .NavBar {
     display: flex;
     flex-direction: row;
-    gap: 1rem; 
+    gap: 1rem;
+    align-items: center;
+    font-size: x-large;
+    margin: 20px;
 }

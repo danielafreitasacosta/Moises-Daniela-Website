@@ -5,19 +5,20 @@ import Grid from "@mui/material/Grid";
 export default function wines() {
     return (
         <div>
-            <Grid container marginTop={"20px"}>
+            <Grid container marginTop={"30px"}>
                 <Grid item md={12}>
                     <div className="vinya-page">
-                        <h1>Nuestro vino es nuestra pasión</h1>
+                        <h1 className="parrafo-center">Nuestro vino es nuestra pasión</h1>
                     </div>
                 </Grid>
+            </Grid>
+            <Grid container marginTop={"30px"}>
                 <Grid item md={6}>
                     <div className="parrafo">
                         <h1>SOMOS ESPECIALISTAS EN VIÑAS</h1>
                         <p>Vinos de Catalunya</p>
                     </div>
                 </Grid>
-
                 <Grid item md={6}>
                     <div>
                         <p className="parrafo">
@@ -35,15 +36,7 @@ export default function wines() {
                         </p>
                     </div>
                 </Grid>
-                <Grid item md={2}>
-                    <div>
-                    <img
-                        src="/images/h1-gallery-01.jpg"
-                        alt="copa"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} ></img>
-                    </div>
-                </Grid>
-            </Grid>
+            </Grid>            
         </div>
     )
 }
