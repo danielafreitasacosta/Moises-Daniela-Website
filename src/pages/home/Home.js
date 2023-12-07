@@ -8,8 +8,9 @@ import WeatherCard from "src/components/index/WeatherCard";
 import PackFotos from "../packfotos/PackFotos";
 import Weather from "./weather/Weather";
 import Infoenlaces from "./infoenlaces/Infoenlaces";
+import { withTranslation } from "react-i18next"
 
-const Home = () => {
+const Home = ({ t, i18n }) => {
   return (
     <>
       <div className="image-grid">
@@ -18,8 +19,8 @@ const Home = () => {
         </div>
         <hr style={{ width: '100%', backgroundColor: 'white', height: '2px', border: 'none', marginTop: '20px' }} />
         <NavigationBar />
-        <h1> CONOCE NUESTRA VINOTECA  </h1>
-        <p>---- desde 1870 ----</p>
+        <h1>{t('present.titulo')}</h1>
+        <p>{t('present.subtitulo')}</p>
       </div >
       <div>
         <Vinya />
@@ -41,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withTranslation('home')(Home);

@@ -9,7 +9,7 @@ i18n
     .init({
         load: 'languageOnly',
         fallbackLng: {
-            default: ['es']
+            default: ['en']
         },
         debug: true,
         ns: ['home'],

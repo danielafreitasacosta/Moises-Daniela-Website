@@ -6,7 +6,7 @@ function WeatherCard ({ t, i18n }) {
         
         <div>
             <Typography>
-                {t('temperatura')}
+                {t('infotop.fecha')}
             </Typography>
             <h1>
                 Curs SOC 

@@ -1,3 +1,32 @@
 {
-    "temperatura": "Temperature hellow"
+    "global": {
+        "infotopizquierda": "Wine tastings and winey tours",
+        "infotopderecha": "Canet de Mar, 08360 Barcelona, Spain",
+        "inicio": "Index",
+        "historia": "History",
+        "vinos": "Wines",
+        "contacto": "Contact"
+    },
+
+    "present": {
+        "titulo": "GET TO KNOW OUR WINE STORE",
+        "subtitulo": "---- since 1870 ----"
+    },
+
+    "viñas": {
+        "titulo": "Our wine is our passion",
+        "contenedor1": "WE ARE SPECIALISTS IN VINEYARDS",
+        "contenedor11": "Wines of Catalonia",
+        "contenedor2": "One of the main characteristics of Vi Novell is its versatility to create pairings. Being a seasonal product, it harmonizes perfectly with autumn products: mushrooms, pumpkins, sweet potatoes or artichokes. It also combines very well with croquettes, grilled lamb, or the simple but exquisite potato omelette. The queens of this season are chestnuts, so with a cream of this fruit or with a Christmas broth, you will have a perfect pair. If we return to that popular Catalan proverb, we must not forget dishes with pork. Some fried eggs will go wonderfully with the wines of this 2020 vintage. The pairing can be done with a white such as Donzell Blanc 2020 (DO Penedès), whose fresh and carbonated touch helps offset the greasy sensation. The Garrí Novell 2020 red wine (DO Conca de Barberà), made with Syrah, could be another option. The wineries The wineries that are part of this proposal will suggest pairing options on their website, so that you can live the harmonization experience. with different culinary proposals. This year, 2020, a new winery has joined the initiative: Sanstravé, protected under the Conca de Barberà Designation of Origin. So it is already part of those wineries that seek to reclaim the custom of tasting the first wine of the year together with Celler Carles Andreu, Celler Cooperatiu de l'Espolla, Cooperativa La Granada, Covides, Maset, Celler Masroig, Sant Josep Vins, Vinícola de Sarral and Vins Petxina."
+    },
+    
+    "clima": {
+        "titulo": "Weather forecast"
+    },
+
+    "infoenlaces": {
+        "tituloflash": "Enlaces Rápidos",
+        "ubicacion": "Canet de Mar, Barcelona 08360, Spain",
+        "horario": "Monday to Friday 08:00 to 18:00"
+    }    
 }
