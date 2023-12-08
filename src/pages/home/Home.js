@@ -4,7 +4,6 @@ import NavigationBar from "src/components/core/NavigationBar";
 import 'src/pages/home/Home' // Crearemos este archivo en el siguiente paso
 import InfoTop from "../info-top/InfoTop";
 import Vinya from "../viñas/Vinya"
-import WeatherCard from "src/components/index/WeatherCard";
 import PackFotos from "../packfotos/PackFotos";
 import Weather from "./weather/Weather";
 import Infoenlaces from "./infoenlaces/Infoenlaces";
@@ -35,7 +34,7 @@ const Home = ({ t, i18n }) => {
         <Infoenlaces />
       </div>
       <div>
-        <WeatherCard />
+        <Weather />
       </div>
 
     </>

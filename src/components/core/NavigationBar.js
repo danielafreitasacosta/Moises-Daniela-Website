@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './NavigationBar.css';
 import logoImage from './logo-light-new.png';
-import { withTranslation } from "react-i18next"
-import { Grid, Typography } from "@mui/material";
+import { withTranslation } from "react-i18next";
 
 function NavigationBar({ t, i18n }) {
 

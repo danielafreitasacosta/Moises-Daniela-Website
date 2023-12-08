@@ -1,11 +1,7 @@
 import "./Contact.css";
-import React, { useRef } from 'react';
-import NavigationBar from "src/components/core/NavigationBar";
-import 'src/pages/contact/Contact'
+import { useRef } from 'react';
+import 'src/pages/contact/Contact';
 import emailjs from '@emailjs/browser';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import 'src/styles/globalStyles.css'; 
 import { Stack } from "@mui/system";
 import ContactForm from "src/components/contact/ContactForm";
 
