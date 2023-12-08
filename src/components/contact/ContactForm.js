@@ -35,6 +35,7 @@ function SendEmail() {
 
 function ContactForm() {
     const formStyle = {
+        marginTop: "8px",
         marginBottom: "8px",
         display: "flex",
         alignItems: "center",

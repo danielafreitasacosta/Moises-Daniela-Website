@@ -33,9 +33,7 @@ const Home = ({ t, i18n }) => {
       <div>
         <Infoenlaces />
       </div>
-      <div>
-        <Weather />
-      </div>
+      
 
     </>
   );
