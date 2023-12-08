@@ -1,12 +1,14 @@
+
+
 const defaultTheme = {
   colors: {
-    primary: '#3498db',
+    primary: '#98db34',
     secondary: '#2ecc71',
     // Agrega más colores según sea necesario
   },
   fonts: {
-    heading: 'Georgia, serif',
-    body: 'Verdana, sans-serif',
+    heading: 'Montserrat, sans-serif',
+    body: 'Montserrat, sans-serif',
     // Agrega más tipografías según sea necesario
   },
   // Otros estilos específicos del tema
