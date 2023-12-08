@@ -1,23 +1,16 @@
+
+import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import NotFound from './components/shared/NotFound';
+import './App.css';
+import NotFound from './pages/not-found/NotFound';
 import Contact from './pages/contact/Contact';
 import History from './pages/history/History';
-import Visitas from './pages/visitas/Visitas';
-import Wine from './pages/wine/Wine';
+import { Suspense } from 'react';
+import AppLayout from './layouts/AppLayout';
+import AppLayoutNoFooter from './layouts/AppLayoutNoFooter';
 import React from 'react';
 import './index.css';
 import Home from './pages/home/Home';
-import './services/i18n';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: green[500],
-    },
-  },
-});
 
 const router = createBrowserRouter([
   {
@@ -57,3 +50,4 @@ function App() {
 }
 
 export default App;
+
