@@ -1,9 +1,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import NotFound from './components/shared/NotFound';
 import Contact from './pages/contact/Contact';
-import History from './pages/history/History';
-import Visitas from './pages/visitas/Visitas';
-import Wine from './pages/wine/Wine';
+import History from './components/history/History';
+import Wine from './components/wine/Wine';
 import React from 'react';
 import './index.css';
 import Home from './pages/home/Home';
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />
-  },
-  {
-    path: '/visitas',
-    element: <Visitas />
   },
   {
     path: '/history',

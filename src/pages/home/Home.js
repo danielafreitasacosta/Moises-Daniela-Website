@@ -2,25 +2,22 @@ import "./Home.css";
 import React from 'react';
 import NavigationBar from "src/components/core/NavigationBar";
 import 'src/pages/home/Home' // Crearemos este archivo en el siguiente paso
-import InfoTop from "../info-top/InfoTop";
-import Vinya from "../viñas/Vinya"
+import InfoTop from "../../components/info-top/InfoTop";
+import Vinya from "../../components/viñas/Vinya"
 import WeatherCard from "src/components/index/WeatherCard";
-import PackFotos from "../packfotos/PackFotos";
-import Weather from "./weather/Weather";
-import Infoenlaces from "./infoenlaces/Infoenlaces";
+import PackFotos from "../../components/packfotos/PackFotos";
+import Weather from "../../components/weather/Weather";
+import Infoenlaces from "../../components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next"
+import Titulo from "src/components/titulo/Titulo";
 
 const Home = ({ t, i18n }) => {
   return (
     <>
-      <div className="image-grid">
-        <div className="paragraf1">
-          <InfoTop />
-        </div>
-        <hr style={{ width: '100%', backgroundColor: 'white', height: '2px', border: 'none', marginTop: '20px' }} />
+      <div className="image-grid" >
+        <InfoTop />
         <NavigationBar />
-        <h1>{t('present.titulo')}</h1>
-        <p>{t('present.subtitulo')}</p>
+        <Titulo />
       </div >
       <div>
         <Vinya />
@@ -34,10 +31,6 @@ const Home = ({ t, i18n }) => {
       <div>
         <Infoenlaces />
       </div>
-      <div>
-        <WeatherCard />
-      </div>
-
     </>
   );
 };
