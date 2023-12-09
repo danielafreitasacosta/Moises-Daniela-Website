@@ -1,17 +1,18 @@
 import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
+import Stack from '@mui/material/Stack';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+
 
 /*
 Credenciales de la cuenta de Gmail donde llegan los correos: 
 Correo: cellertecnocampus@gmail.com
-Contraseña: CELLerTECNOcampus2023!
+ContraseÃ±a: CELLerTECNOcampus2023!
 */
 
 function SendEmail() {
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -33,6 +34,15 @@ function SendEmail() {
 }
 
 function ContactForm() {
+    const formStyle = {
+        marginTop: "8px",
+        marginBottom: "8px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center", 
+		
+    };
+
     const { control, handleSubmit, formState: { errors }, reset } = useForm({
         defaultValues: {
             fieldName: ''
@@ -40,16 +50,21 @@ function ContactForm() {
     });
 
     function onSubmit(value) {
+        
         console.log(value);
         //Enviamos el formulario a nuestro servidor 
 
         reset();
     }
 
+   
+
     return (
         <>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form style={formStyle} onSubmit={handleSubmit(SendEmail)}>
+
+              <Stack spacing={2}>  
 
                 <Controller
                     name="fieldName"
@@ -109,6 +124,7 @@ function ContactForm() {
                     Enviar
                 </Button>
 
+                </Stack>
 
             </form>
 

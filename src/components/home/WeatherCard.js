@@ -1,17 +1,19 @@
 import { Typography } from "@mui/material";
 import { withTranslation } from "react-i18next"
 
-function WeatherCard ({ t, i18n }) {
+function WeatherCard ({ children, fecha, t, i18n }) {
     return (
         
         <div>
             <Typography>
-                {t('infotop.fecha')}
+                {t('temperatura')}
             </Typography>
             <h1>
                 Curs SOC 
             </h1>
-            
+            { children }
+
+            Fecha: {fecha.toLocaleDateString()}
         </div>
     )
 }

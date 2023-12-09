@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './NavigationBar.css';
 import logoImage from './logo-light-new.png';
-import { withTranslation } from "react-i18next"
+import { withTranslation } from "react-i18next";
 
 function NavigationBar({ t, i18n }) {
 
@@ -16,7 +16,7 @@ function NavigationBar({ t, i18n }) {
         <div className="NavBar">
             <NavLink to="/">{t('global.inicio')}</NavLink>
             <NavLink to="/history">{t('global.historia')}</NavLink>
-            <img src={logoImage} alt="Logo" style={iconStyle}/>
+            <img src={logoImage} alt="Logo" style={iconStyle} />
             <NavLink to="/wine">{t('global.vinos')}</NavLink>
             <NavLink to="/contact">{t('global.contacto')}</NavLink>
         </div>

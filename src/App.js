@@ -1,14 +1,19 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import NotFound from './components/shared/NotFound';
-import Contact from './pages/contact/Contact';
-import History from './components/history/History';
-import Wine from './components/wine/Wine';
-import React from 'react';
-import './index.css';
-import Home from './pages/home/Home';
-import './services/i18n';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+import { ThemeProvider } from '@emotion/react';
 import { green } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import 'src/services/theme';
+import './App.css';
+import NotFound from './components/shared/NotFound';
+import './index.css';
+import Contact from './pages/contact/Contact';
+import History from './pages/history/History';
+import Home from './pages/home/Home';
+import Visitas from './pages/visitas/Visitas';
+import Wine from './pages/wine/Wine';
+import './services/i18n';
+
 
 const theme = createTheme({
   palette: {
@@ -26,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />
+  },
+  {
+    path: '/visitas',
+    element: <Visitas />
   },
   {
     path: '/history',
