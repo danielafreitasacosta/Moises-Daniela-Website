@@ -5,12 +5,14 @@ import { withTranslation } from "react-i18next"
 
 function wines({ t, i18n}) {
     return (
-        <>
-            
+        <div>
+            <Grid container marginTop={"30px"}>
+                <Grid item md={12}>
                     <div className="vinya-page">
                         <h1 className="parrafo-center">{t('viñas.titulo')}</h1>
                     </div>
-              
+                </Grid>
+            </Grid>
             <Grid container marginTop={"30px"}>
                 <Grid item md={6}>
                     <div className="parrafo">
@@ -26,7 +28,7 @@ function wines({ t, i18n}) {
                     </div>
                 </Grid>
             </Grid>            
-        </>
+        </div>
     )
 }
 export default withTranslation('home')(wines);

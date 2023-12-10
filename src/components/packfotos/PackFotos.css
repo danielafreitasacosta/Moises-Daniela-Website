@@ -1,9 +1,0 @@
-.contimg {
-  width: 85%; /* Ajusta el tamaño según tus necesidades */
-  height:85%; /* Ajusta el tamaño según tus necesidades */
-  object-fit: cover; /* Esto puede ayudar a mantener la proporción de la imagen */
-  margin: 5px; /* Añade márgenes si es necesario */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  margin-top: 50px;
-}
