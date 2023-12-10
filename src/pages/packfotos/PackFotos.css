@@ -1,0 +1,36 @@
+.vinya-page {
+    background-image: url('/public/images/landing-parallax-img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Color del texto */
+  }
+  .column {
+    width: 100%;
+    height: 50vh;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .parrafo {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #000;
+    text-align: left;
+  }
+  .parrafo-center {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    text-align: center;
+  }
+  .caja {
+    margin: 10px;
+    
+  }
