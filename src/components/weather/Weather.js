@@ -42,11 +42,12 @@ const WeatherComponent = () => {
 
                             <Grid container spacing={2} sx={containerStyle}>
                                 <Grid item md={3}>
+                                <Paper elevation={0} sx={boxStyle}>
 
                                     <div>{`Día ${format(new Date(weatherData.pronostico.hoy['@attributes'].fecha), 'dd')}`}</div>
                                     <div>Max: {weatherData.temperaturas.max}ºC</div>
                                     <div>Min: {weatherData.temperaturas.min}ºC</div>
-
+</Paper>
                                 </Grid>
                                 {weatherData.proximos_dias.map((item) => (
                                     <Grid item md={3} key={item}>
