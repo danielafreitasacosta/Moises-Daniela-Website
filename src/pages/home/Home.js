@@ -10,10 +10,13 @@ import Weather from "../../components/weather/Weather";
 import Infoenlaces from "../../components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next"
 import Titulo from "src/components/titulo/Titulo";
-
+import Cookies from "src/components/cookies/cookies";
 const Home = ({ t, i18n }) => {
   return (
     <>
+      <div>
+        <Cookies />
+      </div>
       <div className="image-grid" >
         <InfoTop />
         <NavigationBar />
@@ -31,6 +34,7 @@ const Home = ({ t, i18n }) => {
       <div>
         <Infoenlaces />
       </div>
+
     </>
   );
 };
