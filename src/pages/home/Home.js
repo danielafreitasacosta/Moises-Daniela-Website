@@ -9,16 +9,15 @@ import Weather from "src/components/weather/Weather";
 import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next"
 import { Paper } from '@mui/material';
+import Cookies from "src/components/cookies/Cookies";
 
 const Home = ({ t, i18n }) => {
   return (
     <>
+      <Cookies />
       <Paper>
         <div className="image-grid">
-          <div className="paragraf1">
-            <InfoTop />
-          </div>
-          <hr style={{ width: '100%', backgroundColor: 'white', height: '2px', border: 'none', marginTop: '20px' }} />
+          <InfoTop />
           <NavigationBar />
           <h1>{t('present.titulo')}</h1>
           <p>{t('present.subtitulo')}</p>
@@ -35,7 +34,6 @@ const Home = ({ t, i18n }) => {
         <div>
           <Infoenlaces />
         </div>
-
       </Paper>
     </>
   );

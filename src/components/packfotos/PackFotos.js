@@ -7,22 +7,22 @@ export default function packfotos() {
         <div>
             <Grid container spacing={2}>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-01.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-01.jpg" className="contimg"></img>
                 </Grid>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-02.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-02.jpg" className="contimg"></img>
                 </Grid>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-03.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-03.jpg" className="contimg"></img>
                 </Grid>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-04.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-04.jpg" className="contimg"></img>
                 </Grid>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-05.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-05.jpg" className="contimg"></img>
                 </Grid>
                 <Grid item md={2}>
-                    <img src="/images/h1-gallery-06.jpg" className="contimg"></img>
+                    <img src="images/h1-gallery-06.jpg" className="contimg"></img>
                 </Grid>
             </Grid>
         </div>

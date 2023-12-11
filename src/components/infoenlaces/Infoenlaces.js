@@ -1,8 +1,4 @@
 import Grid from "@mui/material/Grid";
-import telefono from "./iconos/icons8-celular-50.png";
-import correo from "./iconos/icons8-correo-50.png"
-import gps from "./iconos/icons8-gps-50.png"
-import reloj from "./iconos/icons8-reloj-50.png"
 import React from 'react';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
@@ -65,19 +61,19 @@ const InfoEnlaces = ({ t, i18n }) => {
                 </li>
 
                 <li style={listItemStyle}>
-                  <img src={gps} alt="GPS" style={iconStyle} />
+                  <img src="images/iconos/icons8-gps-50.png" alt="GPS" style={iconStyle} />
                   {t('infoenlaces.ubicacion')}
                 </li>
                 <li style={listItemStyle}>
-                  <img src={reloj} alt="Reloj" style={iconStyle} />
+                <img src="images/iconos/icons8-reloj-50.png"  alt="Horario" style={iconStyle} />
                   {t('infoenlaces.horario')}
                 </li>
                 <li style={listItemStyle}>
-                  <img src={telefono} alt="Teléfono" style={iconStyle} />
+                <img src="images/iconos/icons8-celular-50.png" alt="Teléfono" style={iconStyle} />
                   +34 655696480
                 </li>
                 <li style={listItemStyle}>
-                  <img src={correo} alt="Correo" style={iconStyle} />
+                <img src="images/iconos/icons8-correo-50.png" alt="Correo" style={iconStyle} />
                   perezmm@infomoi.cat
                 </li>
                 <li style={listItemStyle}>

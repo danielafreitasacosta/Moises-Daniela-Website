@@ -21,7 +21,7 @@ function InfoTop({ t, i18n }) {
                         {t('global.infotopderecha')}
                     </Typography>
                 </Grid>
-
+                
             </Grid>
             <hr style={{ width: '100%', backgroundColor: 'white', height: '1px', border: 'none', marginTop: '10px' }} />
         </>

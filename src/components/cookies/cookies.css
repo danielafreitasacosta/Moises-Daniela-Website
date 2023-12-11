@@ -1,6 +1,6 @@
 .aviso-cookies {
     display: none;
-    background: white;
+    background: #fff;
     padding: 20px;
     width: calc(100% - 40px);
     max-width: 300px;
@@ -20,6 +20,7 @@
 }
 .aviso-cookies .galleta {
 max-width: 100px;
+max-height: 100px;
 position: absolute;
 top: -50px;
 left: calc(50% - 50px);

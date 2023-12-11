@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './cookies.css';
+import './Cookies.css';
 
 export default function Cookies() {
     useEffect(() => {
@@ -47,7 +47,9 @@ export default function Cookies() {
     return (
         <>
             <div className="aviso-cookies" id="aviso-cookies">
-            <img className="galleta" src="images/cookie.png" alt="Galleta"></img>
+                <img className="galleta" src="images/cookie.png" alt="Galleta"></img>
+                <h3 className="titulo">Cookies</h3>
+                <p className="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
                 <button className="boton" id="btn-aceptar-cookies">De acuerdo</button>
                 <button className="boton" id="btn-navegar-sin-cookies">Navegar sin cookies</button>
                 <a className="enlace" href="aviso-cookies.html">Aviso de Cookies</a>
