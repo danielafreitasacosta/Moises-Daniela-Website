@@ -1,53 +1,22 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import NotFound from './components/shared/NotFound';
-import Contact from './pages/contact/Contact';
-import History from './components/history/History';
-import Wine from './components/wine/Wine';
-import React from 'react';
+import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
+import { RouterProvider } from 'react-router-dom';
+import 'src/services/theme';
+import './App.css';
 import './index.css';
-import Home from './pages/home/Home';
 import './services/i18n';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
+import 'src/services/theme';
+import router from './services/router';
+import theme from 'src/services/theme';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: green[500],
-    },
-  },
-});
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/contact',
-    element: <Contact />
-  },
-  {
-    path: '/history',
-
-    element: <History />
-  },
-  {
-    path: '/wine',
-    element: <Wine />
-  },
-  {
-    path: '*',
-    element: <NotFound />
-  }
-])
 
 function App() {
   return (
 
-    <ThemeProvider theme={theme}>
+    <CssVarsProvider theme={theme}>
+      <div>
       <RouterProvider router={router} />
-    </ThemeProvider>
+      </div>
+    </CssVarsProvider>
   )
 }
 
