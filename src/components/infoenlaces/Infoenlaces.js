@@ -1,4 +1,3 @@
-import NavigationBar from "src/components/core/NavigationBar";
 import Grid from "@mui/material/Grid";
 import telefono from "./iconos/icons8-celular-50.png";
 import correo from "./iconos/icons8-correo-50.png"
@@ -48,7 +47,6 @@ const InfoEnlaces = ({ t, i18n }) => {
     <Grid container marginTop={"10px"}>
       <hr style={{ width: '100%', backgroundColor: 'black', height: '2px', border: 'none', marginTop: '10px' }} />
       <Grid item md={6} className="parrafo">
-
         <ul style={listStyle}>
           <li style={listItemStyle}>
             <h1>CHATEAU</h1>
@@ -73,7 +71,6 @@ const InfoEnlaces = ({ t, i18n }) => {
             <LanguageSwitcher />
           </li>
         </ul>
-
       </Grid>
       <Grid item md={6} className="parrafo">
         <h1>{t('infoenlaces.tituloflash')}</h1>
