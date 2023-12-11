@@ -1,7 +1,7 @@
 import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 import Stack from '@mui/material/Stack';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
@@ -11,13 +11,32 @@ Correo: cellertecnocampus@gmail.com
 ContraseÃ±a: CELLerTECNOcampus2023!
 */
 
-function SendEmail() {
+const formStyle = {
+    marginTop: "8px",
+    marginBottom: "8px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center", 
+    
+    
+};
 
+
+
+export function ContactForm () {
+    
     const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const { control, handleSubmit, formState: { errors }, reset } = useForm({
+        defaultValues: {
+            fieldName: '', 
+            fieldEmail: '', 
+            fieldMessage: '', 
+        }
+    });
 
+    const SendEmail = () => {
+       
         emailjs.sendForm(
             'service_pddibau',
             'template_1qz768n',
@@ -29,40 +48,18 @@ function SendEmail() {
             }, (error) => {
                 console.log(error.text);
             });
-        e.target.reset();
-    };
-}
+       
+        // form.current.reset();
 
-function ContactForm() {
-    const formStyle = {
-        marginTop: "8px",
-        marginBottom: "8px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center", 
-		
-    };
-
-    const { control, handleSubmit, formState: { errors }, reset } = useForm({
-        defaultValues: {
-            fieldName: ''
-        }
-    });
-
-    function onSubmit(value) {
-        
-        console.log(value);
-        //Enviamos el formulario a nuestro servidor 
-
-        reset();
     }
 
-   
+     
+    
 
     return (
         <>
 
-            <form style={formStyle} onSubmit={handleSubmit(SendEmail)}>
+            <form  style={formStyle} ref={form} onSubmit={handleSubmit(SendEmail)}>
 
               <Stack spacing={2}>  
 
@@ -85,17 +82,16 @@ function ContactForm() {
                 />
 
                 <Controller
-                    name="fieldName"
+                    name="fieldEmail"
                     control={control}
                     rules={{ required: 'Este campo es obligatorio' }}
                     render={({ field }) =>
                         <TextField
                             {...field}
                             label="Email"
-                            variant="outlined"
                             size='small'
-                            error={!!errors.fieldName}
-                            helperText={errors?.fieldName?.message.toString()}
+                            error={!!errors.fieldEmail}
+                            helperText={errors?.fieldEmail?.message.toString()}
                         />
                     }
 
@@ -103,7 +99,7 @@ function ContactForm() {
                 />
 
                 <Controller
-                    name="fieldName"
+                    name="fieldMessage"
                     control={control}
                     rules={{ required: 'Debes rellenar este campo' }}
                     render={({ field }) =>
@@ -112,15 +108,15 @@ function ContactForm() {
                             label="Mensaje"
                             multiline
                             rows={4}
-                            error={!!errors.fieldName}
-                            helperText={errors?.fieldName?.message.toString()
+                            error={!!errors.fieldMessage}
+                            helperText={errors?.fieldMessage?.message.toString()
                             }
                         />
                     }
                 />
 
 
-                <Button variant="contained" type="submit" color="primary" onClick={SendEmail}>
+                <Button variant="contained" type="submit" color="primary">
                     Enviar
                 </Button>
 
@@ -131,7 +127,18 @@ function ContactForm() {
 
 
         </>
-    )
-}
+    );
+                };
+
 
 export default ContactForm; 
+
+
+   
+
+  
+
+  
+   
+
+   

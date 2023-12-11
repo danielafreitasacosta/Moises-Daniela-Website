@@ -7,6 +7,9 @@ import React from 'react';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
 import './Infoenlaces.css';
+import { Button, List, ListItem, ListItemButton, Paper } from "@mui/material";
+import Box from '@mui/material/Box';
+import ColorSwitch from "../core/ColorSwitch";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -17,10 +20,9 @@ const LanguageSwitcher = () => {
 
   return (
     <div>
-      <button onClick={() => changeLanguage('es')}>Español</button>
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button>LIGHT</button>
-      <button>DARK</button>
+      <Button variant="contained" size="small" sx={{ margin: 1 }} onClick={() => changeLanguage('es')}>Español</Button>
+      <Button variant="contained" size="small" sx={{ margin: 1 }} onClick={() => changeLanguage('en')}>English</Button>
+      <ColorSwitch />
     </div>
   );
 };
@@ -28,7 +30,7 @@ const LanguageSwitcher = () => {
 const InfoEnlaces = ({ t, i18n }) => {
   const listStyle = {
     listStyle: 'none',
-    paddingLeft: 0,
+
   };
 
   const listItemStyle = {
@@ -44,52 +46,96 @@ const InfoEnlaces = ({ t, i18n }) => {
   };
 
   return (
-    <Grid container marginTop={"10px"}>
-      <hr style={{ width: '100%', backgroundColor: 'black', height: '2px', border: 'none', marginTop: '10px' }} />
-      <Grid item md={6} className="parrafo">
-        <ul style={listStyle}>
-          <li style={listItemStyle}>
-            <h1>CHATEAU</h1>
-          </li>
-          <li style={listItemStyle}>
-            <img src={gps} alt="GPS" style={iconStyle} />
-            {t('infoenlaces.ubicacion')}
-          </li>
-          <li style={listItemStyle}>
-            <img src={reloj} alt="Reloj" style={iconStyle} />
-            {t('infoenlaces.horario')}
-          </li>
-          <li style={listItemStyle}>
-            <img src={telefono} alt="Teléfono" style={iconStyle} />
-            +34 655696480
-          </li>
-          <li style={listItemStyle}>
-            <img src={correo} alt="Correo" style={iconStyle} />
-            perezmm@infomoi.cat
-          </li>
-          <li style={listItemStyle}>
-            <LanguageSwitcher />
-          </li>
-        </ul>
-      </Grid>
-      <Grid item md={6} className="parrafo">
-        <h1>{t('infoenlaces.tituloflash')}</h1>
-        <ul style={listStyle}>
-          <li style={listItemStyle}>
-            <NavLink to="/">{t('global.inicio')}</NavLink>
-          </li>
-          <li style={listItemStyle}>
-            <NavLink to="/history">{t('global.historia')}</NavLink>
-          </li>
-          <li style={listItemStyle}>
-            <NavLink to="/wine">{t('global.vinos')}</NavLink>
-          </li>
-          <li style={listItemStyle}>
-            <NavLink to="/contact">{t('global.contacto')}</NavLink>
-          </li>
-        </ul>
-      </Grid>
-    </Grid>
+    <>
+      <Paper elevation={0}>
+        <Grid container marginTop={"10px"}>
+          <hr style={{ width: '100%', backgroundColor: 'black', height: '2px', border: 'none', marginTop: '10px' }} />
+
+
+          <Grid item md={6} className="parrafo">
+
+
+            <Paper elevation={0}>
+              <ul>
+
+                <li style={listItemStyle}>
+
+                  <h1>CHATEAU</h1>
+
+                </li>
+
+                <li style={listItemStyle}>
+                  <img src={gps} alt="GPS" style={iconStyle} />
+                  {t('infoenlaces.ubicacion')}
+                </li>
+                <li style={listItemStyle}>
+                  <img src={reloj} alt="Reloj" style={iconStyle} />
+                  {t('infoenlaces.horario')}
+                </li>
+                <li style={listItemStyle}>
+                  <img src={telefono} alt="Teléfono" style={iconStyle} />
+                  +34 655696480
+                </li>
+                <li style={listItemStyle}>
+                  <img src={correo} alt="Correo" style={iconStyle} />
+                  perezmm@infomoi.cat
+                </li>
+                <li style={listItemStyle}>
+                  <LanguageSwitcher />
+                </li>
+              </ul>
+
+            </Paper>
+          </Grid>
+
+
+
+          <Grid item md={6} className="parrafo">
+            <Paper elevation={0}>
+              <ul>
+                <li style={listItemStyle}>
+
+                  <h1>{t('infoenlaces.tituloflash')}</h1>
+                </li>
+                <List component="a" sx={{ color: 'primary.main' }} >
+
+                  <ListItem align-items='center'>
+                    <ListItemButton sx={{ color: 'primary.main' }}  >
+                      <NavLink to="/">{t('global.inicio')}</NavLink>
+                    </ListItemButton>
+                  </ListItem>
+
+
+                  <ListItem align-items='center'>
+                    <ListItemButton>
+                      <NavLink to="/history">{t('global.historia')}</NavLink>
+                    </ListItemButton>
+                  </ListItem>
+
+                  <ListItem align-items='center'>
+                    <ListItemButton>
+                      <NavLink to="/wine">{t('global.vinos')}</NavLink>
+                    </ListItemButton>
+                  </ListItem>
+
+                  <ListItem align-items='center'>
+                    <ListItemButton>
+                      <NavLink to="/contact">{t('global.contacto')}</NavLink>
+                    </ListItemButton>
+                  </ListItem>
+
+                </List>
+
+              </ul>
+
+            </Paper>
+          </Grid>
+
+        </Grid>
+      </Paper>
+
+
+    </>
   );
 };
 

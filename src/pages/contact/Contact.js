@@ -1,11 +1,13 @@
-import "./Contact.css";
-import { useRef } from 'react';
-import 'src/pages/contact/Contact';
 import emailjs from '@emailjs/browser';
+import {Experimental_CssVarsProvider as CssVarsProvider} from '@mui/material/styles';
 import { Stack } from "@mui/system";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { useRef } from 'react';
 import ContactForm from "src/components/contact/ContactForm";
-import Infoenlaces from "../home/infoenlaces/Infoenlaces";
+import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
+import 'src/pages/contact/Contact';
+import theme from "src/services/theme";
+import ColorSwitch from "src/components/core/ColorSwitch"; 
+import "./Contact.css";
 
 
 /*
@@ -27,21 +29,6 @@ const Contact = () => {
 		paddingTop: 15,
 
 	}
-
-	const theme = createTheme({
-		palette: {
-			background: {
-				paper: '#fff',
-			},
-			text: {
-				primary: '#173A5E',
-				secondary: '#46505A',
-			},
-			action: {
-				active: '#001E3C',
-			},
-		},
-	});
 
 	const form = useRef();
 
@@ -66,15 +53,17 @@ const Contact = () => {
 	return (
 
 		<>
+			<CssVarsProvider theme={theme}>
+
 			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47723.69108122675!2d0.5787352015325178!3d41.61833494518661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a6e048e73bd37f%3A0xa0d32ea2d259aaaf!2zTMOpcmlkYQ!5e0!3m2!1ses!2ses!4v1701892300427!5m2!1ses!2ses"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.835877874908!2d0.8810152!3d42.06813715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a65d313b0e9c13%3A0xcb859fda64d616f2!2s25631%20Cellers%2C%20L%C3%A9rida!5e0!3m2!1ses!2ses!4v1702154646208!5m2!1ses!2ses"
 				width='100%'
 				height='450'
 				style={{ border: 0 }}
 				loading="lazy"
 			/>
 
-			<ThemeProvider theme={theme}>
+		
 
 				<Stack sx={{ color: 'text.secondary', fontSize: 14 }}>
 
@@ -84,11 +73,14 @@ const Contact = () => {
 
 				</Stack>
 
-			</ThemeProvider>
+			
+
+			
 
 			<Infoenlaces />
+			
 
-
+			</CssVarsProvider>
 
 		</>
 	);
