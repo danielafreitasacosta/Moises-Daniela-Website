@@ -10,6 +10,7 @@ import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next"
 import { Paper } from '@mui/material';
 import Cookies from "src/components/cookies/Cookies";
+import NotFound from "src/components/shared/NotFound";
 
 const Home = ({ t, i18n }) => {
   return (
@@ -19,8 +20,8 @@ const Home = ({ t, i18n }) => {
         <div className="image-grid">
           <InfoTop />
           <NavigationBar />
-          <h1>{t('present.titulo')}</h1>
-          <p>{t('present.subtitulo')}</p>
+          <h1 className="titulo">{t('present.titulo')}</h1>
+          <h1 className="titulo2">{t('present.subtitulo')}</h1>
         </div >
         <div>
           <Vinya />

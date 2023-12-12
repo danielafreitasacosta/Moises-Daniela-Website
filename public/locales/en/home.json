@@ -21,7 +21,8 @@
     },
     
     "clima": {
-        "titulo": "Weather forecast"
+        "titulo": "Weather forecast",
+        "dia": "Day"
     },
 
     "infoenlaces": {

@@ -11,14 +11,25 @@ function NavigationBar({ t, i18n }) {
         height: "25%",
         
     };
+    const containerStyle = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "200px",
+    };
+    const linkStyle = {
+        margin: "0 10px",
+        textDecoration: "none",
+        color: "white",
+      };
 
     return (
-        <div className="NavBar">
-            <NavLink to="/">{t('global.inicio')}</NavLink>
-            <NavLink to="/history">{t('global.historia')}</NavLink>
+        <div className="NavBar" style={containerStyle}>
+            <NavLink to="/" style={linkStyle}>{t('global.inicio')}</NavLink>
+            <NavLink to="/history" style={linkStyle}>{t('global.historia')}</NavLink>
             <img src={logoImage} alt="Logo" style={iconStyle} />
-            <NavLink to="/wine">{t('global.vinos')}</NavLink>
-            <NavLink to="/contact">{t('global.contacto')}</NavLink>
+            <NavLink to="/wine" style={linkStyle}>{t('global.vinos')}</NavLink>
+            <NavLink to="/contact" style={linkStyle}>{t('global.contacto')}</NavLink>
         </div>
     )
 }

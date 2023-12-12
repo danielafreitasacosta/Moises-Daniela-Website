@@ -2,15 +2,6 @@
     margin-top: 10px;
     display: flex;
     align-items: center;
-}
-
-.left {
-    display: flex;
-    align-items: flex-start;
-
-}
-
-.right {
-    display: flex;
-    align-items: flex-end;
+    color: white;
+    
 }

@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
+import "./NotFound.css";
 
-export default function NotFound () {
+export default function NotFound() {
     return (
-        <div>
-            <p>
-                No encontramos la página que buscas.
-            </p>
-            <p>
-                Puedes ir a la HOME mediante el enlace de abajo
-            </p>
+        <div className="background">
             <div>
-                <Link to="/">Home</Link>
+                <img className="imagen" src="images/triste.png"></img>
             </div>
+            <h2>
+                No encontramos la página que buscas.
+            </h2>
+            <h1>
+                Puedes ir a la HOME mediante el enlace de abajo.
+            </h1>
+            <div>
+                <button className="boton" onClick={() => window.location.href = '/'}>Ir a Home</button>
+            </div>
+
         </div>
     )
 }
