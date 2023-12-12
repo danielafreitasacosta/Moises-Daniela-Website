@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import format from 'date-fns/format';
 import { Card, CardContent, Grid, Paper, Typography } from '@mui/material';
 import { t } from 'i18next';
+import './Weather.css';
 
 const WeatherComponent = () => {
     const [weatherData, setWeatherData] = useState(null);
@@ -43,10 +44,9 @@ const WeatherComponent = () => {
                             <Grid container spacing={2} sx={containerStyle}>
                                 <Grid item md={3}>
                                     <Paper elevation={0} sx={boxStyle}>
-
                                         <div>{t('clima.dia')} {format(new Date(weatherData.pronostico.hoy['@attributes'].fecha), 'dd')}</div>
-                                        <div>Max: {weatherData.temperaturas.max}ºC</div>
-                                        <div>Min: {weatherData.temperaturas.min}ºC</div>
+                                        <div className='max-temperature'>Max: {weatherData.temperaturas.max}ºC</div>
+                                        <div className='min-temperature'>Min: {weatherData.temperaturas.min}ºC</div>
                                     </Paper>
                                 </Grid>
                                 {weatherData.proximos_dias.map((item) => (
@@ -55,7 +55,8 @@ const WeatherComponent = () => {
                                             <div>
                                                 {t('clima.dia')} {format(new Date(item['@attributes'].fecha), 'dd')}
                                             </div>
-                                            <div>Max: {item.temperatura.maxima}ºC</div><div>Min: {item.temperatura.minima}ºC</div>
+                                            <div className='max-temperature'>Max: {item.temperatura.maxima}ºC</div>
+                                            <div className='min-temperature'>Min: {item.temperatura.minima}ºC</div>
                                         </Paper>
                                     </Grid>
                                 ))}

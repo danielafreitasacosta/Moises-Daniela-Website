@@ -4,3 +4,11 @@
     align-items: center;
     width: 100%S;
 }
+
+.max-temperature {
+    color: #ff0000;
+}
+
+.min-temperature {
+    color: #0000ff;
+}

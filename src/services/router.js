@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Contact from 'src/pages/contact/Contact';
-import History from 'src/components/history/History';
+import History from 'src/pages/history/History';
 import Home from 'src/pages/home/Home';
-import Wine from 'src/components/wine/Wine';
-import NotFound from "src/components/shared/NotFound";
+import Wine from 'src/pages/wine/Wine';
+import NotFound from "src/pages/notfound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <Wine />
   },
   {
-    path: '/shared',
+    path: '*',
     element: <NotFound />
   }
 ]);
