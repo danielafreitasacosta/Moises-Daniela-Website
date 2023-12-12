@@ -7,7 +7,7 @@ import PackFotos from "src/components/packfotos/PackFotos";
 import Weather from "src/components/weather/Weather";
 import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next";
-import { Paper, Typography, useMediaQuery } from '@mui/material';
+import { Paper, useMediaQuery } from '@mui/material';
 import Cookies from "src/components/cookies/Cookies";
 import "./Home.css";
 import DrawerResponsive from "src/components/core/Drawer";

@@ -2,9 +2,6 @@ import { NavLink } from "react-router-dom";
 import './NavigationBar.css';
 import logoImage from './logo-light-new.png';
 import { withTranslation } from "react-i18next";
-import { useMediaQuery } from "@mui/material";
-import theme from "src/services/theme";
-import DrawerResponsive from "./Drawer";
 
 function NavigationBar({ t, i18n }) {
 
