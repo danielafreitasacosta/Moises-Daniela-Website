@@ -3,9 +3,10 @@ import React from 'react';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
 import './Infoenlaces.css';
-import { Button, List, ListItem, ListItemButton, Paper } from "@mui/material";
+import { Button, List, ListItem, ListItemButton, Paper, Link } from "@mui/material";
 import Box from '@mui/material/Box';
 import ColorSwitch from "../core/ColorSwitch";
+import { useTheme } from "@emotion/react";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -13,6 +14,8 @@ const LanguageSwitcher = () => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
+
+
 
   return (
     <div>
@@ -41,6 +44,8 @@ const InfoEnlaces = ({ t, i18n }) => {
     height: "20px",
   };
 
+  const theme = useTheme();
+
   return (
     <>
       <Paper elevation={0}>
@@ -65,15 +70,15 @@ const InfoEnlaces = ({ t, i18n }) => {
                   {t('infoenlaces.ubicacion')}
                 </li>
                 <li style={listItemStyle}>
-                <img src="images/iconos/icons8-reloj-50.png"  alt="Horario" style={iconStyle} />
+                  <img src="images/iconos/icons8-reloj-50.png" alt="Horario" style={iconStyle} />
                   {t('infoenlaces.horario')}
                 </li>
                 <li style={listItemStyle}>
-                <img src="images/iconos/icons8-celular-50.png" alt="Teléfono" style={iconStyle} />
+                  <img src="images/iconos/icons8-celular-50.png" alt="Teléfono" style={iconStyle} />
                   +34 655696480
                 </li>
                 <li style={listItemStyle}>
-                <img src="images/iconos/icons8-correo-50.png" alt="Correo" style={iconStyle} />
+                  <img src="images/iconos/icons8-correo-50.png" alt="Correo" style={iconStyle} />
                   perezmm@infomoi.cat
                 </li>
                 <li style={listItemStyle}>
@@ -93,32 +98,36 @@ const InfoEnlaces = ({ t, i18n }) => {
 
                   <h1>{t('infoenlaces.tituloflash')}</h1>
                 </li>
-                <List component="a" sx={{ color: 'primary.main' }} >
-
-                  <ListItem align-items='center'>
-                    <ListItemButton sx={{ color: 'primary.main' }}  >
-                      <NavLink to="/">{t('global.inicio')}</NavLink>
-                    </ListItemButton>
-                  </ListItem>
+                <List component="a" sx={{ color: 'primary.main', textDecorationLine: 'none', alignItems: 'center' }} >
 
 
-                  <ListItem align-items='center'>
-                    <ListItemButton>
-                      <NavLink to="/history">{t('global.historia')}</NavLink>
-                    </ListItemButton>
-                  </ListItem>
+                  <ListItemButton sx={{ color: 'primary.main', textDecorationLine: 'none', alignItems: 'center' }}>
 
-                  <ListItem align-items='center'>
-                    <ListItemButton>
-                      <NavLink to="/wine">{t('global.vinos')}</NavLink>
-                    </ListItemButton>
-                  </ListItem>
+                    <NavLink to="/">{t('global.inicio')}</NavLink>
 
-                  <ListItem align-items='center'>
-                    <ListItemButton>
-                      <NavLink to="/contact">{t('global.contacto')}</NavLink>
-                    </ListItemButton>
-                  </ListItem>
+                  </ListItemButton>
+
+
+
+
+                  <ListItemButton>
+                    <NavLink to="/notfound">{t('global.historia')}</NavLink>
+                  </ListItemButton>
+
+
+
+
+                  <ListItemButton>
+                    <NavLink to="/notfound">{t('global.vinos')}</NavLink>
+                  </ListItemButton>
+
+
+
+                  <ListItemButton>
+
+                    <NavLink to="/contact">{t('global.contacto')}</NavLink>
+                  </ListItemButton>
+
 
                 </List>
 

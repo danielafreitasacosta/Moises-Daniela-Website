@@ -5,16 +5,16 @@ export default function Footer() {
         <div>
             <ul>
                 <li>
-                    <Link to='/'>Inicio</Link>
+                    <Link color="primary" to='/'>Inicio</Link>
                 </li>
                 <li>
-                    <Link to='/contact'>Contact</Link>
+                    <Link color="primary" to='/contact'>Contact</Link>
                 </li>
                 <li>
-                    <Link to='/history'>History</Link>
+                    <Link color="primary" to='/history'>History</Link>
                 </li>
                 <li>
-                    <Link to='/visitas'>Visitas</Link>
+                    <Link color="primary" to='/visitas'>Visitas</Link>
                 </li>
             </ul>
             Derechos reservados

@@ -31,9 +31,9 @@ function NavigationBar({ t, i18n }) {
 
             <div className="NavBar" style={containerStyle}  >
                 <NavLink to="/" style={linkStyle}>{t('global.inicio')}</NavLink>
-                <NavLink to="/history" style={linkStyle}>{t('global.historia')}</NavLink>
+                <NavLink to="/notfound" style={linkStyle}>{t('global.historia')}</NavLink>
                 <img src={logoImage} alt="Logo" style={iconStyle} />
-                <NavLink to="/wine" style={linkStyle}>{t('global.vinos')}</NavLink>
+                <NavLink to="/notfound" style={linkStyle}>{t('global.vinos')}</NavLink>
                 <NavLink to="/contact" style={linkStyle}>{t('global.contacto')}</NavLink>
             </div>
         </>

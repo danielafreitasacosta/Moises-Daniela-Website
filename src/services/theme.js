@@ -1,8 +1,10 @@
 
 import { green, grey, pink } from '@mui/material/colors';
 import {
-    experimental_extendTheme as extendTheme
+    experimental_extendTheme as extendTheme, makeStyles
 } from '@mui/material/styles';
+import { Link } from '@mui/material';
+
 
 
 
@@ -15,7 +17,11 @@ const theme = extendTheme({
                 },
                 secondary: {
                     main: green[200],
-                }
+                },
+                background: {
+                    defaultChannel: green[700],
+
+                },
             },
         },
 
@@ -30,6 +36,7 @@ const theme = extendTheme({
                 background: {
                     default: pink[900],
                     paper: grey[800],
+                    defaultChannel: pink[800],
                 },
                 text: {
                     primary: grey[50],
@@ -48,6 +55,21 @@ const theme = extendTheme({
             textTransform: 'uppercase'
         },
     },
+    components: {
+        // Aplica los estilos al enlace en todo el proyecto
+        MuiLink: {
+            styleOverrides: {
+                root: {
+                    ...Link,
+                    fontSize: '1rem',
+                    underline: 'none',
+                    color: 'primary'
+                },
+            },
+        },
+    },
 });
+
+
 
 export default theme; 

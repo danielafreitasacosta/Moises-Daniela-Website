@@ -7,7 +7,7 @@ import PackFotos from "src/components/packfotos/PackFotos";
 import Weather from "src/components/weather/Weather";
 import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
 import { withTranslation } from "react-i18next";
-import { Paper, useMediaQuery } from '@mui/material';
+import { Grid, Paper, useMediaQuery } from '@mui/material';
 import Cookies from "src/components/cookies/Cookies";
 import "./Home.css";
 import DrawerResponsive from "src/components/core/Drawer";
@@ -33,12 +33,15 @@ const Home = ({ t, i18n }) => {
               <NavigationBar />
             )
           }
-
-          <h1 className="titulo">{t('present.titulo')}</h1>
-          <h1 className="titulo2">{t('present.subtitulo')}</h1>
+          <Grid sx={{ textAlign: 'center' }}>
+            <h1 className="titulo">{t('present.titulo')}</h1>
+            <h1 className="titulo2">{t('present.subtitulo')}</h1>
+          </Grid>
         </div >
         <div>
+
           <Vinya />
+
         </div>
         <div>
           <PackFotos />
