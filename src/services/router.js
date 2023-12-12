@@ -27,6 +27,6 @@ const router = createBrowserRouter([
     path: '/shared',
     element: <NotFound />
   }
-]); 
+]);
 
 export default router; 

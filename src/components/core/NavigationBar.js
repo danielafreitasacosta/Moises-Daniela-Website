@@ -2,14 +2,19 @@ import { NavLink } from "react-router-dom";
 import './NavigationBar.css';
 import logoImage from './logo-light-new.png';
 import { withTranslation } from "react-i18next";
+import { useMediaQuery } from "@mui/material";
+import theme from "src/services/theme";
+import DrawerResponsive from "./Drawer";
 
 function NavigationBar({ t, i18n }) {
 
+    //const isSmall = useMediaQuery(theme.breakpoints.down('md'));
+
     const iconStyle = {
         marginRight: "5px",
-        width: "25%", 
+        width: "25%",
         height: "25%",
-        
+
     };
     const containerStyle = {
         display: "flex",
@@ -21,16 +26,22 @@ function NavigationBar({ t, i18n }) {
         margin: "0 10px",
         textDecoration: "none",
         color: "white",
-      };
+    };
 
     return (
-        <div className="NavBar" style={containerStyle}>
-            <NavLink to="/" style={linkStyle}>{t('global.inicio')}</NavLink>
-            <NavLink to="/history" style={linkStyle}>{t('global.historia')}</NavLink>
-            <img src={logoImage} alt="Logo" style={iconStyle} />
-            <NavLink to="/wine" style={linkStyle}>{t('global.vinos')}</NavLink>
-            <NavLink to="/contact" style={linkStyle}>{t('global.contacto')}</NavLink>
-        </div>
+
+        <>
+
+            <div className="NavBar" style={containerStyle}  >
+                <NavLink to="/" style={linkStyle}>{t('global.inicio')}</NavLink>
+                <NavLink to="/history" style={linkStyle}>{t('global.historia')}</NavLink>
+                <img src={logoImage} alt="Logo" style={iconStyle} />
+                <NavLink to="/wine" style={linkStyle}>{t('global.vinos')}</NavLink>
+                <NavLink to="/contact" style={linkStyle}>{t('global.contacto')}</NavLink>
+            </div>
+        </>
+
+
     )
 }
 export default withTranslation('home')(NavigationBar);

@@ -1,25 +1,39 @@
-import "./Home.css";
-import React from 'react';
+
 import NavigationBar from "src/components/core/NavigationBar";
-import 'src/pages/home/Home' // Crearemos este archivo en el siguiente paso
+import 'src/pages/home/Home'; // Crearemos este archivo en el siguiente paso
 import InfoTop from "src/components/info-top/InfoTop";
-import Vinya from "src/components/viñas/Vinya"
+import Vinya from "src/components/viñas/Vinya";
 import PackFotos from "src/components/packfotos/PackFotos";
 import Weather from "src/components/weather/Weather";
 import Infoenlaces from "src/components/infoenlaces/Infoenlaces";
-import { withTranslation } from "react-i18next"
-import { Paper } from '@mui/material';
+import { withTranslation } from "react-i18next";
+import { Paper, Typography, useMediaQuery } from '@mui/material';
 import Cookies from "src/components/cookies/Cookies";
-import NotFound from "src/components/shared/NotFound";
+import "./Home.css";
+import DrawerResponsive from "src/components/core/Drawer";
+import theme from "src/services/theme";
 
 const Home = ({ t, i18n }) => {
+
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  console.log(isMatch)
+
   return (
     <>
       <Cookies />
       <Paper>
         <div className="image-grid">
           <InfoTop />
-          <NavigationBar />
+          {
+            isMatch ? (
+              <>
+                <DrawerResponsive />
+              </>
+            ) : (
+              <NavigationBar />
+            )
+          }
+
           <h1 className="titulo">{t('present.titulo')}</h1>
           <h1 className="titulo2">{t('present.subtitulo')}</h1>
         </div >
@@ -35,6 +49,7 @@ const Home = ({ t, i18n }) => {
         <div>
           <Infoenlaces />
         </div>
+
       </Paper>
     </>
   );
