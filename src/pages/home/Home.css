@@ -17,13 +17,11 @@
   font-size: 50px;
   font-weight: 500;
   flex-direction: column;
-
   margin-top: 100px;
   align-items: center;
   color: white;
-  
-  
 }
+
 .titulo2 {
   flex-direction: column;
   align-items: center;

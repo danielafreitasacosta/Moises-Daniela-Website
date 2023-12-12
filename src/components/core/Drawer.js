@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Drawer, IconButton, List, ListItemButton, ListItemText, Stack, useMediaQuery } from "@mui/material";
+import { Drawer, IconButton, Stack } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import CancelIcon from '@mui/icons-material/Cancel';
 import theme from "src/services/theme";
 import { NavLink } from "react-router-dom";
 import logoImage from './logo-light-new.png';
-import { withTranslation } from "react-i18next";
+import logoImageDark from './logo-dark-new.png';
 
 
 const DrawerResponsive = () => {
@@ -12,44 +13,70 @@ const DrawerResponsive = () => {
 
     console.log(theme);
 
-    const iconStyle = {
+    const iconStyleDrawer = {
         marginRight: "5px",
-        width: "25%",
-        height: "25%",
+        paddingTop: "20px",
+        marginLeft: "15px",
+        width: "50%",
+        height: "50%",
 
     };
-    const containerStyle = {
+    const containerStyleDrawer = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         height: "200px",
     };
-    const linkStyle = {
-        margin: "0 10px",
+    const linkStyleDrawer = {
+        paddingTop: "15px",
+        paddingLeft: "15px",
         textDecoration: "none",
-        color: "black",
+        fontsize: "1 rem",
+        fontweight: "700",
+        color: "theme.primary.main",
+
     };
+
+    const [colorTheme, setColorTheme] = useState();
+
+
+
 
     return (
         <>
             <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)} >
 
 
-                <Stack>
-                    <img src={logoImage} alt="Logo" style={iconStyle} />
-                    <NavLink to="/" style={linkStyle}>Inicio</NavLink>
-                    <NavLink to="/history" style={linkStyle}>Historia</NavLink>
-                    <NavLink to="/wine" style={linkStyle}>Vinos</NavLink>
-                    <NavLink to="/contact" style={linkStyle}>Contacto</NavLink>
+                <Stack sx={{ marginLeft: '1', padding: '2' }} >
+                    {
+                        colorTheme === 'light' ? (
+                            <>
+                                <img src={logoImage} alt="Logo" style={iconStyleDrawer} />
+                            </>
+                        ) : (
+                            <img src={logoImageDark} alt="Logo" style={iconStyleDrawer} />
+                        )
+                    }
+
+                    <NavLink to="/" style={linkStyleDrawer}>Inicio</NavLink>
+                    <NavLink to="/history" style={linkStyleDrawer}>Historia</NavLink>
+                    <NavLink to="/wine" style={linkStyleDrawer}>Vinos</NavLink>
+                    <NavLink to="/contact" style={linkStyleDrawer}>Contacto</NavLink>
+
 
                 </Stack>
 
+                <IconButton onClick={() => setOpenDrawer(!openDrawer)}  >
+                    <CancelIcon fontSize='large' color='primary' sx={{ edge: 'start', size: 'large' }} />
+                </IconButton >
+
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}  >
-                <MenuIcon color="primary" />
+                <MenuIcon fontSize='large' color='primary' sx={{ edge: 'start' }} />
             </IconButton >
         </>
     )
 }
 
-export default DrawerResponsive; 
+export default DrawerResponsive;
+

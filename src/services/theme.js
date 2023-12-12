@@ -20,17 +20,6 @@ const theme = extendTheme({
                     main: green[200],
                 }
             },
-            /*:action: {
-                active: green[200],
-                activeOpacity: 1,
-                hover: green[100],
-                hoverOpacity: 0.7,
-                focus: green[600],
-                focusOpacity: 1,
-                selected: green[300],
-                selectedOpacity: 1
-              },
-              */
         },
 
         dark: {
@@ -43,7 +32,7 @@ const theme = extendTheme({
                 },
                 background: {
                     default: pink[900],
-                    paper: grey[600],
+                    paper: grey[800],
                 },
                 text: {
                     primary: grey[50],
