@@ -6,11 +6,10 @@ export default function wines() {
     return (
         <div className="wines-page">
             <NavigationBar />
-            <div className="column">
                 <Grid container>
-                    <Grid item md={6}>
-                        <p className="parrafo">
-                            <h1>Vino Novell</h1>
+                <Grid item md={6} sx={{ backgroundColor: "white", height: "100%" }}>
+                            <h1 className="parrafo">Vino Novell</h1>
+                            <p className="parrafo">
                             Una de las principales características del vi novell es su versatilidad para crear maridajes. Al ser un producto de temporada, armoniza a la perfección con los de otoño: setas, calabazas, boniatos o alcachofas.
 
                             También se combina muy bien con croquetas, cordero a la brasa, o la simple pero exquisita tortilla de patatas. Las reinas de esta temporada son las castañas, así que con un crema de este fruto o con un caldo de navidad, tendrás una pareja perfecta.
@@ -25,16 +24,14 @@ export default function wines() {
     
                         </p>
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={6} sx={{ backgroundColor: "white", height: "100%" }}>
                         <img
                             src="/images/vi-novell-01.jpg"
                             alt="Imagen del vino"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            style={{ width: '90%', height: '90%', objectFit: 'cover', alignContent: 'space-between', marginTop: '30px', marginRight:'0px' }}/>
                         />
                     </Grid>
                 </Grid>
             </div>
-        </div>
-
     )
 }

@@ -1,5 +1,5 @@
 .wines-page {
-    background-image: url('/public/images/uvas.jpg');
+    background-image: url('/public/images/main-rev-img-3.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -22,3 +22,11 @@
     margin-left: 50px;
     margin-right: 50px;
   }
+  .NavBar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-size: x-large;
+    margin: 20px;
+}

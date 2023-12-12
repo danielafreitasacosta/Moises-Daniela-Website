@@ -6,12 +6,10 @@ export default function History() {
     return (
 
         <div className="history-page">
-
-            <NavigationBar />
+                <NavigationBar />
             <Grid container>
                 <Grid item md={6} sx={{ backgroundColor: "white", height: "100%" }}>
                     <h1 className="parrafo">DESCUBRE LA HISTORIA DE NUESTROS VIÑEDOS</h1>
-
                     <p className="parrafo">
                         Hay que viajar muchos siglos atrás para encontrar el origen del romance entre Cataluña y los vinos. Griegos, romanos e íberos fueron los responsables de introducir los primeros viñedos en la región, plantados hace 2.500 años. Desde entonces el universo vinícola catalán no ha dejado de evolucionar y esparcirse por el territorio.
 
@@ -24,16 +22,13 @@ export default function History() {
                         Conectan con el temperamento de estos vinos las experiencias enoturísticas que puedes hacer en las 12 DO.
                     </p>
                 </Grid>
-                <Grid item md={6} sx={{ backgroundColor: "white", height: "100%" }}>
+                <Grid item md={6} sx={{ backgroundColor: "white", height: "100%"}}>
                     <img
                         src="/images/catalunya-raims.jpg"
                         alt="Imagen del las uvas"
-                        style={{ width: '90%', height: '90%', objectFit: 'cover', alignContent: 'space-between', margin: '10px' }}
-                    />
+                        style={{ width: '90%', height: '90%', objectFit: 'cover', alignContent: 'space-between', marginTop: '30px', marginRight:'0px' }}/>
                 </Grid>
             </Grid>
         </div>
-
-
     )
 }
