@@ -44,8 +44,8 @@ const InfoEnlaces = ({ t, i18n }) => {
   return (
     <>
       <Paper elevation={0}>
-        <Grid container marginTop={"10px"}>
-          <hr style={{ width: '100%', backgroundColor: 'black', height: '2px', border: 'none', marginTop: '10px' }} />
+        <Grid className="fondo" container marginTop={"10px"}>
+          <hr style={{ width: '100%', backgroundColor: 'black', height: '2px', border: 'none', marginTop: '0px' }} />
 
 
           <Grid item md={6} className="parrafo">
