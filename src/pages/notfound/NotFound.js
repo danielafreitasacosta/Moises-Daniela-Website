@@ -5,7 +5,7 @@ export default function NotFound() {
     return (
         <div className="background">
             <div>
-                <img className="imagen" src="images/triste.png"></img>
+                <img className="imagen" src="images/triste.png" alt="pagina-no-encontrada-icono"></img>
             </div>
             <h2>
                 No encontramos la página que buscas.

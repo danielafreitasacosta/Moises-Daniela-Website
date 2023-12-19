@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Drawer, IconButton, Stack } from "@mui/material";
+import { Drawer, IconButton, Stack, ListItemButton } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CancelIcon from '@mui/icons-material/Cancel';
 import theme from "src/services/theme";
@@ -21,12 +21,7 @@ const DrawerResponsive = () => {
         height: "50%",
 
     };
-    const containerStyleDrawer = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "200px",
-    };
+
     const linkStyleDrawer = {
         paddingTop: "15px",
         paddingLeft: "15px",
@@ -57,11 +52,18 @@ const DrawerResponsive = () => {
                             <img src={logoImageDark} alt="Logo" style={iconStyleDrawer} />
                         )
                     }
-
-                    <NavLink to="/" style={linkStyleDrawer}>Inicio</NavLink>
-                    <NavLink to="/history" style={linkStyleDrawer}>Historia</NavLink>
-                    <NavLink to="/wine" style={linkStyleDrawer}>Vinos</NavLink>
-                    <NavLink to="/contact" style={linkStyleDrawer}>Contacto</NavLink>
+                    <ListItemButton sx={{ color: theme => theme.palette.primary.main }}>
+                        <NavLink to="/" style={linkStyleDrawer}>Inicio</NavLink>
+                    </ListItemButton>
+                    <ListItemButton sx={{ color: theme => theme.palette.primary.main, textDecoration: 'none' }}>
+                        <NavLink to="/notfound" style={linkStyleDrawer}>Historia</NavLink>
+                    </ListItemButton>
+                    <ListItemButton sx={{ color: theme => theme.palette.primary.main }}>
+                        <NavLink to="/notfound" style={linkStyleDrawer}>Vinos</NavLink>
+                    </ListItemButton>
+                    <ListItemButton sx={{ color: theme => theme.palette.primary.main }}>
+                        <NavLink to="/contact" style={linkStyleDrawer}>Contacto</NavLink>
+                    </ListItemButton>
 
 
                 </Stack>

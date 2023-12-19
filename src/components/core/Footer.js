@@ -1,24 +1,20 @@
 import { Link } from "react-router-dom";
-import { RoutesPath } from "src/services/router";
 
 export default function Footer() {
     return (
         <div>
             <ul>
                 <li>
-                    <Link to='/'>Inicio</Link>
+                    <Link color="primary" to='/'>Inicio</Link>
                 </li>
                 <li>
-                    <Link to={RoutesPath.CONTACTO}>Contact</Link>
+                    <Link color="primary" to='/contact'>Contact</Link>
                 </li>
                 <li>
-                    <Link to='/history'>History</Link>
+                    <Link color="primary" to='/history'>History</Link>
                 </li>
                 <li>
-                    <Link to={RoutesPath.WINE}>Vinos</Link>
-                </li>
-                <li>
-                    <Link to='/visitas'>Visitas</Link>
+                    <Link color="primary" to='/visitas'>Visitas</Link>
                 </li>
             </ul>
             Derechos reservados
