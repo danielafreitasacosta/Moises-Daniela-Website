@@ -5,13 +5,21 @@ import Home from 'src/pages/home/Home';
 import Wine from 'src/pages/wine/Wine';
 import NotFound from "src/pages/notfound/NotFound";
 
+
+export const RoutesPath = {
+  CONTACTO: '/contacto',
+  WINE: '/wine'
+
+}
+
 const router = createBrowserRouter([
+
   {
     path: '/',
     element: <Home />
   },
   {
-    path: '/contact',
+    path: RoutesPath.CONTACTO,
     element: <Contact />
   },
   {
@@ -20,7 +28,7 @@ const router = createBrowserRouter([
     element: <History />
   },
   {
-    path: '/wine',
+    path: RoutesPath.WINE,
     element: <Wine />
   },
   {

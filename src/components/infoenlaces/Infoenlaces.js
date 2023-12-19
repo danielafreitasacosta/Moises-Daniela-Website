@@ -6,6 +6,8 @@ import './Infoenlaces.css';
 import { Button, List, ListItem, ListItemButton, Paper } from "@mui/material";
 import Box from '@mui/material/Box';
 import ColorSwitch from "../core/ColorSwitch";
+import { CONTACTO_PATH, RoutesPath } from "src/services/router";
+
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -110,13 +112,13 @@ const InfoEnlaces = ({ t, i18n }) => {
 
                   <ListItem align-items='center'>
                     <ListItemButton>
-                      <NavLink to="/wine">{t('global.vinos')}</NavLink>
+                      <NavLink to={RoutesPath.WINE}>{t('global.vinos')}</NavLink>
                     </ListItemButton>
                   </ListItem>
 
                   <ListItem align-items='center'>
                     <ListItemButton>
-                      <NavLink to="/contact">{t('global.contacto')}</NavLink>
+                      <NavLink to={RoutesPath.CONTACTO}>{t('global.contacto')}</NavLink>
                     </ListItemButton>
                   </ListItem>
 
